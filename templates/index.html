@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Energy Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="dark">
+    <div class="container">
+        <h1>⚡ Smart Energy Intelligence Dashboard</h1>
+
+        <div class="top-buttons">
+            <button class="scan-btn" onclick="scanDevices()">Scan Network</button>
+            <button class="download-btn" onclick="downloadCSV()">Download CSV</button>
+            <button class="theme-btn" onclick="toggleTheme()">Toggle Theme</button>
+        </div>
+
+        <div id="deviceContainer" class="cards-container"></div>
+
+        <div class="chart-container">
+            <canvas id="powerBarChart"></canvas>
+            <canvas id="powerPieChart"></canvas>
+        </div>
+
+        <h2>Scan History (Last 5)</h2>
+        <ul id="historyList"></ul>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
